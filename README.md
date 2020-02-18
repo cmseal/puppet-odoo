@@ -69,7 +69,7 @@ class { '::odoo':
       'db_port'      => 'False',
       'db_user'      => 'odoo',
       'db_password'  => 'False',
-      'addons_path'  => '/usr/lib/python3.5/dist-packages/odoo/addons',
+      'addons_path'  => '/usr/lib/python3.6/dist-packages/odoo/addons',
     }
   },
 }
