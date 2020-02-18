@@ -3,8 +3,8 @@ HOSTS:
   ubuntu1404:
     roles:
       - master
-    platform: ubuntu-14.04-x64
-    image: ubuntu:14.04
+    platform: ubuntu-18.04-x64
+    image: ubuntu:18.04
     hypervisor: docker
     docker_image_commands:
       - 'apt-get install -y sudo'

@@ -7,8 +7,8 @@ VAGRANTFILE_API_VERSION = '2'.freeze
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = 'node0'
-  config.vm.box = 'puppetlabs/ubuntu-14.04-64-nocm'
-  config.puppet_install.puppet_version = '3.8.2'
+  config.vm.box = 'puppetlabs/ubuntu-18.04-64-nocm'
+  config.puppet_install.puppet_version = '5.5'
   config.vm.synced_folder '.', '/etc/puppet/modules/odoo'
   metadata_json_file = "#{File.dirname(__FILE__)}/metadata.json"
   if File.exist?(metadata_json_file)
