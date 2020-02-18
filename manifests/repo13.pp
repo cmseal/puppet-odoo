@@ -1,20 +1,25 @@
-# Install a repository to install an Odoo 9 package from.
+# Install a repository to install an Odoo 13 package from.
 #
 # @example Declaring the class
-#   class { '::odoo::repo9':
+#   class { '::odoo::repo13':
 #     before => Class['odoo']
 #   }
 #
 # @param ensure [absent | present] Ensure the the repository is either
 #   absent or present.
 # @param descr [string] A string to describe the repository.
-# @param key_id [string] The key for the Debian APT repository.  This option is ignored on the Red Hat family.
-# @param key_url [string] A URL to the key for the Debian APT repository.  This option is ignored on the Red Hat family.
-# @param pkg_url [string] The URL to a package.  This defaults to 'http://nightly.odoo.com/9.0/nightly/rpm/' on the Red
-#   Hat family and 'http://nightly.odoo.com/9.0/nightly/deb/' on Debian.
-# @param release [string] The release for the Debian APT repository.  This option is ignored on the Red Hat family.
-# @param repos [string] The repos for the Debian APT repository.  This option is ignored on the Red Hat family.
-class odoo::repo9 (
+# @param key_id [string] The key for the Debian APT repository.  This option
+#   is ignored on the Red Hat family.
+# @param key_url [string] A URL to the key for the Debian APT repository.
+#   This option is ignored on the Red Hat family.
+# @param pkg_url [string] The URL to a package.  This defaults to
+#   'http://nightly.odoo.com/13.0/nightly/rpm/' on the Red
+#   Hat family and 'http://nightly.odoo.com/13.0/nightly/deb/' on Debian.
+# @param release [string] The release for the Debian APT repository.  This
+#   option is ignored on the Red Hat family.
+# @param repos [string] The repos for the Debian APT repository.  This option
+#   is ignored on the Red Hat family.
+class odoo::repo13 (
   $ensure  = present,
   $descr   = 'Odoo Nightly repository',
   $key_id  = '5D134C924CB06330DCEFE2A1DEF2A2198183CBB5',
@@ -28,7 +33,7 @@ class odoo::repo9 (
       if $pkg_url != undef {
         $baseurl = $pkg_url
       } else {
-        $baseurl = 'http://nightly.odoo.com/9.0/nightly/rpm/'
+        $baseurl = 'http://nightly.odoo.com/13.0/nightly/rpm/'
       }
 
       yumrepo { 'odoo':
@@ -53,7 +58,7 @@ class odoo::repo9 (
       if $pkg_url != undef {
         $location = $pkg_url
       } else {
-        $location = 'http://nightly.odoo.com/9.0/nightly/deb/'
+        $location = 'http://nightly.odoo.com/13.0/nightly/deb/'
       }
 
       apt::source {'odoo':

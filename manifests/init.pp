@@ -1,5 +1,20 @@
 # Install and configure Odoo Community.
 #
+# @example Declaring the class with Odoo 13
+#   class { '::odoo':
+#     install_wkhtmltopdf => true,
+#     settings            => {
+#       'options' => {
+#         'admin_passwd' => 'XXX_TOP_SECRET_XXX',
+#         'db_host'      => 'False',
+#         'db_port'      => 'False',
+#         'db_user'      => 'odoo',
+#         'db_password'  => 'False',
+#         'addons_path'  => '/usr/lib/python3.5/dist-packages/odoo/addons',
+#       }
+#     },
+#     version             => present,
+#   }
 # @example Declaring the class with Odoo 10
 #   class { '::odoo':
 #     install_wkhtmltopdf => true,
@@ -11,22 +26,6 @@
 #         'db_user'      => 'odoo',
 #         'db_password'  => 'False',
 #         'addons_path'  => '/usr/lib/python2.7/dist-packages/odoo/addons',
-#       }
-#     },
-#     version             => present,
-#   }
-#
-# @example Declaring the class with Odoo 9
-#   class { '::odoo':
-#     install_wkhtmltopdf => true,
-#     settings            => {
-#       'options' => {
-#         'admin_passwd' => 'XXX_TOP_SECRET_XXX',
-#         'db_host'      => 'False',
-#         'db_port'      => 'False',
-#         'db_user'      => 'odoo',
-#         'db_password'  => 'False',
-#         'addons_path'  => '/usr/lib/python2.7/dist-packages/openerp/addons',
 #       }
 #     },
 #     version             => present,

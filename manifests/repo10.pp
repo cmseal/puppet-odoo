@@ -14,7 +14,7 @@
 #   This option is ignored on the Red Hat family.
 # @param pkg_url [string] The URL to a package.  This defaults to
 #   'http://nightly.odoo.com/10.0/nightly/rpm/' on the Red
-#   Hat family and 'http://nightly.odoo.com/9.0/nightly/deb/' on Debian.
+#   Hat family and 'http://nightly.odoo.com/10.0/nightly/deb/' on Debian.
 # @param release [string] The release for the Debian APT repository.  This
 #   option is ignored on the Red Hat family.
 # @param repos [string] The repos for the Debian APT repository.  This option
