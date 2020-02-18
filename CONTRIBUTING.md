@@ -115,7 +115,7 @@ Then run the tests:
 
 ```shell
 bundle exec rake beaker:centos7                                        
-bundle exec rake beaker:ubuntu1404                                     
+bundle exec rake beaker:ubuntu1804                                     
 ```
 
 ## Further Reading
